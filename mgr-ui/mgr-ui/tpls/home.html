@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>YeeStor</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" href="../css/home.css" type="text/css" media="screen" charset="utf-8">
+	<script src="../js/jquery.js"></script>
+</head>
+<body class="bodyCommon">
+	<div id="header">
+		<a class="logo left" href="home.html" alt="YeeStor">YeeStor</a>
+		<a class="header_btn logout right">注销</a>
+		<a class="header_btn user right">DaoWoo</a>		
+	</div>
+	<div id="body">
+		<div id="aside" class="left">
+			<ul>
+				<li><a class="aside_btn_1 home a_choose" href="home.html">首页<span></span></a></li>
+				<li><a class="aside_btn_1 cm" href="cm/cm.html">系统配置<span></span></a></li>
+				<li><a class="aside_btn_1 resource" href="resource/resource.html">存储资源&nbsp;&nbsp;+<span></span></a></li>
+				<li><a class="aside_btn_1 dev" href="dev/dev.html">设备信息&nbsp;&nbsp;+<span></span></a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div class="left w_40">
+				<div class="panel w_all">
+					<h2 class="panel_h2 panel_common_bg_green">系统概况</h2>
+					<div class="panel_content p_6_24">
+						<table class="w_all lh_35">
+							<tbody>
+								<tr><td class="w65">系统名称：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>
+								<tr><td class="w65">系统时间：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>
+								<tr><td class="w65">设备型号：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>							
+								<tr><td class="w65">启动时间：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>
+								<tr><td class="w65">运行时间：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>
+								<tr><td class="w65">系统版本：</td><td><input class="input_text input_bg_gray w_all input_c_green" type="text" value="测试存储系统"/></td></tr>							
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="panel w_all mt_13">
+					<h2 class="panel_h2 panel_common_bg_green">存储资源</h2>
+					<div class="panel_content p_6_24_15">
+						<table class="w_all lh_35">
+							<tbody>
+								<tr><td class="w65">LUN总数：</td><td class="input_c_green">15</td><td class="w80">存储池总数：</td><td class="input_c_green">1</td></tr>
+							</tbody>
+						</table>
+
+						<fieldset class="mt_5">
+							<legend class="w_all"><span class="left fieldest_lenged_blue">存储资源容量统计(/GB)</span><hr class="hr"></legend>
+							<div class="ov">
+								<div class="left h196 w_half" id="pool">
+								</div>
+								<div class="right h196 w_half" id="lun">
+								</div>
+							</div>
+						</fieldset>						
+					</div>
+				</div>
+			</div>
+
+			<div class="right w_60">
+				<div class="panel w_all">
+					<h2 class="panel_h2 panel_common_bg_green">统计数据</h2>
+					<div class="panel_content p_12_24 ov">
+						<p class="left h168 w_10">吞吐率</p>
+						<div class="right h168 w_90" id="tp">							
+						</div>
+						<p class="left h168 w_10">IOPS</p>
+						<div class="right h168 w_90" id="sr">							
+						</div>						
+					</div>
+				</div>
+
+
+				<div class="panel w_all mt_13">
+					<h2 class="panel_h2 panel_common_bg_green">报警 <a class="panel_title_link">更多>></a></h2>
+					<div class="panel_content">
+						<table class="left warn_leftTabl lh_24 pl_24 m_5" width="35%">
+							<tbody>
+								<tr><td>共<i class="input_c_green">&nbsp;5&nbsp;</i>条未读事件&nbsp;</td></tr>
+								<tr><td>错误信息：</td><td>0</td></tr>
+								<tr><td>预警信息：</td><td>0</td></tr>
+								<tr><td>信息事件：</td><td>0</td></tr>
+								<tr><td>试用期剩余天数：</td><td><i class="input_c_green">99</i> 天</td></tr>								
+							</tbody>
+						</table>
+						<table class="right warn_rightTabl lh_24 pr_24 m_5" width="65%">
+							<tbody>
+								<tr><td>400：</td><td><span>错误的请求。</span></td><td></td></tr>
+								<tr><td>401：</td><td>访问被 WEB 服务器上的 URL 授权策略拒绝。这个错误码为 IIS6.0所专有。</td><td></td></tr>
+								<tr><td>402：</td><td>IP 地址被拒绝。</td><td></td></tr>
+								<tr><td>403：</td><td>客户端证书已过期或尚未生效。</td><td></td></tr>
+								<tr><td>404：</td><td>没有找到文件或目录</td><td></td></tr>
+							</tbody>
+						</table>
+						<div class="clear"></div>
+						<!-- <a class="more_button mt_10">更多</a> -->
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+<script src="../js/common.js"></script>
+<script src="../js/charts/esl/esl.js"></script>
+<script src="../js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+@import url("reset.css");
+@import url("common.css");
+
+/***********header************/
+#header{background-color: #333333;}
+.header_title{font-size: 14px; color: #ffffff;}
+#initlogo{width: 85px; height: 25px; margin-left: 43px; margin-right: 16px; margin-top: 9px;}
+
+/**********body*********/
+#body{}
+
+/****aside*****/
+.aside_ol li{height: 178px;}
+.aside_ol li+li{border-top: 1px solid #BDBEBE;}
+
+.aside_ol_order{padding-top: 10px; padding-left: 5px;}
+.aside_ol_title{margin-top: 100px;text-align: center; font-size: 13px;}
+
+.aside_csi{background: url(../img/init/aside.png) no-repeat center 43px;}
+.aside_ims{background: url(../img/init/aside.png) no-repeat center -123px;}
+.aside_oss{background: url(../img/init/aside.png) no-repeat center -289px;}
+
+.aside_choose{background-color: #fbfbfb;position: relative;}
+.aside_choose span { background:url("../img/init/choose.png") 0 0 no-repeat;  display: block;  height: 16px;  position: absolute;  right: -17px;  top: 80px;  width: 11px;}
+
+/*******content***********/
+#content{margin-left: 159px;}
+
+/******footer********/
+#footer{border-top: 1px solid #d3d3d3; padding: 12px 15px;}
+
+/*****init中带标题的面板***/
+.panel{border: 1px solid #BDBEBE;}
+.panel_h2{padding-left:15px; height: 35px; line-height: 35px; border-bottom: 1px solid #BDBEBE; }
+.panel_content{}
+
+/*******按钮*******/
+/*.btn{padding:10px 20px; color: #ffffff;}*/
+
+/*****navStep************/
+.navStep{overflow: hidden;font-weight: bold;}
+.navStep li{float: left;}
+
+
+/**ssh配置 输入框***/
+.ssh{padding: 15px 29px;}
+
+.imc{padding: 6px 26px;}
+
+/****添加******/
+.add{display: block; width: 100%; height: 214px; background: url("../img/init/add.png") no-repeat center center #FBFBFB;}
+
+/********* table ********/
+/*.initTable{text-align: center;}
+.initTable_header, .initTable_body{width: 100%;}
+.initTable_body td{border-top: 1px solid #BDBEBE;}
+.initTable_header th+th, .initTable_body td+td{border-left: 1px solid #BDBEBE;}*/
+.initTable{text-align: center;}
+.initTable_header, .initTable_body{width: 100%;}
+.initTable_header th{border-bottom: 1px solid #BDBEBE;}
+.initTable_header th+th, .initTable_body td+td{border-left: 1px solid #BDBEBE;}
+.initTable_body tr:nth-child(odd){background-color: #fbfbfb;}
+.initTable_body tr:nth-child(even){background-color: #f3f7f7;}
+
+/**蓝色文字无背景按钮**/
+.blue{color: #2146fe; cursor: pointer;}
+
+.configModuleBtn{cursor: pointer; padding-right: 20px;background: url(../img/init/arrow.png) no-repeat right -16px;}
+.configModuleBtn.click{background: url(../img/init/arrow.png) no-repeat right 6px;}
+
+.fix{position: relative;}
+.configM{width:167px; position: absolute; border: 1px solid #d5d6d6; background-color: #e9f3d1; z-index: 5;}
+.configM li{cursor: pointer; display: block;}
+.configM li:hover{background-color: #e0f1b7;}
+.hide{display: none;}
+
+/*************安装服务页面************/
+.pro_all{background: url(../img/init/progress.png) no-repeat  0 -39px;}
+.pro_ing, .pro_wait{background: url(../img/init/progress.png) no-repeat;}
+.pro_ing{color: #69a016;}
+.pro_error{background: url(../img/init/progress.png) no-repeat 0 -78px;}
+.proTitle{text-indent: 18px;}
+.allProgress{background-color: #e4e4e4;}
+.allProgress .complete{background-color: #a6d959; width: 100%; height: 100%;}
+.allProgress .error{background-color: #f17a77; width: 100%; height: 100%;}
+.allProgress .ing{background-color: #a6d959; width: 36%; height: 100%;}
+
+#chooseDevice{height: 364px; overflow-y: auto; background: url(../img/init/ttBG.png) repeat;}

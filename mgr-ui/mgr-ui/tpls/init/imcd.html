@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0.1//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>YeeStor 管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+	<link rel="stylesheet" href="../../css/init.css" type="text/css" media="screen" charset="utf-8">
+	
+	<!-- <link rel="StyleSheet" href="../../css/tt/circle/css/theme.css" type="text/css" /> -->
+	<!-- <link rel="StyleSheet" href="../../css/tt/init_tt.css" type="text/css" /> -->
+	<script language="javascript" type="text/javascript" src="../../js/jquery.js"></script>
+	<script language="JavaScript" src="../../js/tableTree/Core4j-debug.js"></script>
+	<script language="JavaScript" src="../../js/tableTree/TableTree4j-debug.js"></script>
+	</head>
+<body class="bodyInit">
+	<!-- 安装管理服务 - 选择磁盘 页面 -->
+	<div id="header">
+		<div class="w900 h43 center">
+			<h1 class="header_title"><img id="initlogo" src="../../img/init/logo_9_6.png">欢迎使用 YeeStor 管理系统，请先进行系统安装和初始化</h1>
+		</div>
+	</div>
+
+	<div id="body" class="w878 center p11 clearfix">
+		<div id="aside" class="w146 border h400 bg left">
+			<ol class="aside_ol">
+				<li class="aside_csi"><p class="aside_ol_order">1.</p><p class="aside_ol_title">配置系统信息</p><span></span></li>
+				<li class="aside_ims aside_choose"><p class="aside_ol_order">2.</p><p class="aside_ol_title">安装管理服务</p><span></span></li>
+				<li class="aside_oss"><p class="aside_ol_order">3.</p><p class="aside_ol_title">安装存储服务</p><span></span></li>
+			</ol>
+		</div>
+
+		<div id="content" class="border bg h535">
+			<div class="h478 pl_15 pr_15">
+				<ul class="navStep pt_15">
+					<li><a class="gray">配置设备信息</a>-</li>
+					<li><a class="gray">安装管理适配器</a>-</li>
+					<li><a class="green">选择磁盘</a>-</li>
+					<li><a class="gray">网络设置</a>-</li>
+					<li><a class="gray">安装服务</a></li>
+				</ul>
+
+				<p class="mt_15">选择的磁盘格式化后，将自动作为该服务的存储路径。</p>
+
+				<div id="chooseDevice" class="mt_10 fb border_c">					
+				</div>
+
+				<p class="btn btn_bg_blue small mt_10">进行格式化</p>
+			</div>
+
+			<div id="footer" class="h32 fb clearfix"><a class="left btn btn_bg_blue">上一步</a> <a class="right btn btn_bg_blue">下一步</a></div>
+		</div>
+	</div>
+
+<script language="JavaScript" src="../../js/init/imcd.js"></script>
+</body>
+</html>

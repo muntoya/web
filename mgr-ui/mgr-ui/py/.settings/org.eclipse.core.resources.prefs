@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//ui/cli/cli_device.py=utf-8
+encoding//ui/cli/cli_storage.py=utf-8
+encoding//ui/cli/cli_system.py=utf-8
+encoding//ui/device/models/cluster.py=utf-8
+encoding//ui/device/models/device.py=utf-8
+encoding//ui/home/models/io.py=utf-8
+encoding//ui/resource/models/initiator.py=utf-8
+encoding//ui/resource/models/lun.py=utf-8

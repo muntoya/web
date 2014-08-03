@@ -1,0 +1,46 @@
+<table class="lh_30 w_70 col2 ">
+	<tbody>
+		<tr>
+			<td class="t">启动时间：</td>
+			<td>{{ device_detail.starttime }}</td>
+			<td class="space"></td>
+			<td class="t">内存总容量：</td>
+			<td>{{ device_detail.memory|floatformat:2 }}G</td>
+		</tr>
+		<tr>								
+			<td class="t">运行状态：</td>
+			<td>{% if device_detail.status == 0 %}离线{% else %}在线{% endif %}</td>
+			<td class="space"></td>
+			<td class="t">已使用内存容量：</td>
+			<td>{{ device_detail.memused|floatformat:2 }}G</td>
+		</tr>
+		<tr>								
+			<td class="t">心跳时间：</td>
+			<td>{{ device_detail.heartbeat }}</td>
+			<td class="space"></td>
+			<td class="t">硬盘总容量：</td>
+			<td>{{ device_detail.disk|floatformat:2 }}G</td>
+		</tr>
+		<tr>								
+			<td class="t">处理器核心数：</td>
+			<td>{{ device_detail.core }}</td>
+			<td class="space"></td>
+			<td class="t">已使用容量：</td>
+			<td>{{ device_detail.diskused|floatformat:2 }}G</td>
+		</tr>
+		<tr>								
+			<td class="t">处理器频率：</td>
+			<td>{{ device_detail.frequency }} Mhz</td>
+			<td class="space"></td>
+			<td class="t">网络输入流量：</td>
+			<td>{{ device_detail.in|floatformat:2 }}KB/S</td>
+		</tr>
+		<tr>								
+			<td class="t">处理器利用率：</td>
+			<td>{{ device_detail.cpuused }}%</td>
+			<td class="space"></td>
+			<td class="t">网络输出流量：</td>
+			<td>{{ device_detail.out|floatformat:2 }}KB/S</td>
+		</tr>
+	</tbody>
+</table>

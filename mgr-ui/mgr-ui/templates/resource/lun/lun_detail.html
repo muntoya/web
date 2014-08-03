@@ -1,0 +1,36 @@
+<div id="tabInfo" class="panel_content p_12_24 h150">
+	<table class="lh_30 w_70 col2 ">
+		<tbody>
+			<tr>
+				<td class="t">名称：</td>
+				<td>{{ lun_detail.name }}</td>
+				<td class="t">ID：</td>
+				<td>{{ lun_detail.id }}</td>
+			</tr>
+			<tr>
+				<td class="t">容量：</td>
+				<td>{{ lun_detail.capacity|floatformat:2 }}GB</td>
+				<td class="t">是否映射：</td>
+				<td>{% if lun_detail.mapped %}是{% else %}否{% endif %}</td>
+			</tr>
+			<tr>
+				<td class="t">运行状态：</td>
+				<td>{% if lun_detail.status %}在线{% else %}离线{% endif %}</td>
+				<td class="t">数据使用空间：</td>
+				<td>{{ lun_detail.dataspace|floatformat:2 }}MB</td>
+			</tr>
+			<tr>
+				<td class="t">预取策略：</td>
+				<td>{% if lun_detail.prestore %}智能预取{% else %}随便乱取{% endif %}</td>
+				<td class="t">快照使用空间：</td>
+				<td>{{ lun_detail.snapshotspace|floatformat:2 }}MB</td>
+			</tr>
+			<tr>
+				<td class="t">运行时写策略：</td>
+				<td>{% if lun_detail.writeonrunning %}回写{% else %}乱写{% endif %}</td>
+				<td class="t">是否开启SoCache：</td>
+				<td>{% if lun_detail.socache %}是{% else %}否{% endif %}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

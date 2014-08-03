@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yeestor Login</title>
+<script language="javascript" type="text/javascript" src="../../js/jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="../../css/base.css">
+<link type="text/css" rel="stylesheet" href="../../css/cm.css">
+<link type="text/css" rel="stylesheet" href="../../css/dialog/default.css">
+<link type="text/css" rel="stylesheet" href="../../css/windows/addPosix.css">
+</head> 
+<body>
+	<div id="header_html">		
+		<div class="wrap_header">
+			<a class="logo_yeestor">&nbsp;</a>			
+			<a id="logoutBtn" class="log_button"><span class="logout_btn">&nbsp;</span><span class="log_button_context">注销</span></a>
+
+			<a id="usernameBtn" class="log_button"><span class="username_btn">&nbsp;</span><span class="log_button_context">DaoWoo</span></a>
+		</div>
+	</div>
+	
+	<div id="body_html">
+		<div id="aside">
+			<a class="aside_item"><i class="home_aside">&nbsp;</i>首页</a>
+			<a class="aside_item"><i class="config_aside">&nbsp;</i>系统配置</a>
+			<a class="aside_item"><i class="server_aside">&nbsp;</i>存储服务 +</a>
+			<a class="aside_item"><i class="resource_aside">&nbsp;</i>存储资源 +</a>
+			<a class="aside_item_choose"><i class="device_aside">&nbsp;</i>设备信息 -</a>
+			<ul class="aside_ul">
+				<li><a href="" class="aside_li_choose"><i class="device_1">&nbsp;</i>设备管理</a></li>
+				<li><a href="" class="aside_li"><i class="device_1">&nbsp;</i>服务管理</a></li>
+				<li><a href="" class="aside_li"><i class="device_2">&nbsp;</i>交换机管理</a></li>
+			</ul>
+		</div>
+
+		<div id="main_info">
+			<div class="green_panel">
+				<div class="btn_title title green">
+					<a class="add_btn btn" id="addPosix">添加</a>
+					<a class="update_btn btn" id="updatePosix">修改</a>
+					<a class="del_btn btn">删除</a>
+					<a class="start_btn btn">启动</a>
+					<a class="stop_btn btn">禁用</a>
+					<!-- <a class="setup_btn btn">网络设置</a>
+					<a class="extend_btn btn">磁盘扩展</a> -->
+				</div>
+				
+				<div class="green_table">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">1</i>
+							&nbsp;&nbsp;选中数：<i class="choose_num">1</i>
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header">
+						<thead>
+							<th class="cbox"></th>
+							<th width="15%">访问名称</th>
+							<th width="15%">所属文件卷</th>
+							<th width="20%">客户端 IP</th>
+							<th width="20%">导出目录</th>
+							<th width="20%">运行状态</th>
+							<!-- <th>网络接收/发送(KB/S)</th> -->
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td class="cbox"></td>
+								<td width="15%">posix1</td>
+								<td width="15%">vol1</td>
+								<td width="20%">192.168.20.102</td>
+								<td width="20%">/</td>
+								<td width="20%">运行</td>
+								<!-- <td>2/2.6</td> -->
+							</tr>
+							<!-- <tr>
+								<td class="cbox"></td>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="10%">运行</td>
+								<td width="20%">90%</td>
+								<td width="15%">16%</td>
+								<td>2/2.6</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="10%">运行</td>
+								<td width="20%">90%</td>
+								<td width="15%">16%</td>
+								<td>2/2.6</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="10%">运行</td>
+								<td width="20%">90%</td>
+								<td width="15%">16%</td>
+								<td>2/2.6</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="10%">运行</td>
+								<td width="20%">90%</td>
+								<td width="15%">16%</td>
+								<td>2/2.6</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="10%">运行</td>
+								<td width="20%">90%</td>
+								<td width="15%">16%</td>
+								<td>2/2.6</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+			<div class="green_panel bottom">
+				<div class="tab_title title green">
+					<a class="no_icon_btn choose">详细信息</a>
+					<a class="no_icon_btn">客户端</a>
+					<!-- <a class="no_icon_btn">CPU 使用状况</a>
+					<a class="no_icon_btn">内存使用状况</a>
+					<a class="no_icon_btn">网络流量</a> -->
+				</div>
+				<div class="info">
+					<table class="table_text col2">
+						<tbody>
+							<tr>
+								<td><i>访问名称：</i>posix1</td>
+								<td><i>运行状态：</i>运行</td>
+							</tr>
+							<tr>
+								<td><i>文件卷名称：</i>vol1</td>
+								<td><i>文件卷容量：</i>16GB</td>
+							</tr>
+							<tr>
+								<td><i>文件卷利用率：</i>37.5%</td>
+								<!-- <td><i>磁盘总容量：</i>352G</td> -->
+							</tr>
+							<!-- <tr>
+								<td><i>处理器核心数：</i>1</td>
+								<td><i>已使用容量：</i>222G</td>
+							</tr>
+							<tr>
+								<td><i>处理器频率：</i>2400 Mhz</td>
+								<td><i>网络输入流量：</i>1.2KB/S</td>
+							</tr>
+							<tr>
+								<td><i>处理器利用率：</i>2%</td>
+								<td><i>网络输出流量：</i>2.4KB/S</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>	
+			
+	</div>
+<script src="../../js/greentable.js"></script>
+<script src="../../js/greentable2.js"></script>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/artDialog/jquery.artDialog.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/service/posixService.js"></script>
+</body>
+</html>

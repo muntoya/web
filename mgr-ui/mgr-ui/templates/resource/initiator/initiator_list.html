@@ -1,0 +1,13 @@
+<table class="table_body">
+	<tbody>
+		{% for initiator in initiator_list %}
+		<tr attr="{{ initiator.id }}">
+			<!-- <td class="cbox"></td> -->
+			<td>{{ initiator.id }}</td>
+			<td width="25%">{{ initiator.alias }}</td>
+			<td width="20%">{% if initiator.hbatype == 1 %}FC{% else %}WC{% endif %}</td>
+			<td width="20%">{% if initiator.status == 1 %}已连接{% else %}未连接{% endif %}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

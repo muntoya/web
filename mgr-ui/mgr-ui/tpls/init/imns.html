@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0.1//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>YeeStor 管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >	
+	<link rel="stylesheet" href="../../css/dialog/default.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="../../css/windows/addPosix.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="../../css/init.css" type="text/css" media="screen" charset="utf-8">	
+
+	<script language="javascript" type="text/javascript" src="../../js/jquery.js"></script>
+	<script language="JavaScript" src="../../js/tableTree/Core4j-debug.js"></script>
+	<script language="JavaScript" src="../../js/tableTree/TableTree4j-debug.js"></script>
+</head>
+<body class="bodyInit">
+	<!-- 安装管理服务 - 网络设置 页面 -->
+	<div id="header">
+		<div class="w900 h43 center">
+			<h1 class="header_title"><img id="initlogo" src="../../img/init/logo_9_6.png">欢迎使用 YeeStor 管理系统，请先进行系统安装和初始化</h1>
+		</div>
+	</div>
+
+	<div id="body" class="w878 center p11 clearfix">
+		<div id="aside" class="w146 border h400 bg left">
+			<ol class="aside_ol">
+				<li class="aside_csi"><p class="aside_ol_order">1.</p><p class="aside_ol_title">配置系统信息</p><span></span></li>
+				<li class="aside_ims aside_choose"><p class="aside_ol_order">2.</p><p class="aside_ol_title">安装管理服务</p><span></span></li>
+				<li class="aside_oss"><p class="aside_ol_order">3.</p><p class="aside_ol_title">安装存储服务</p><span></span></li>
+			</ol>
+		</div>
+
+		<div id="content" class="border bg h535">
+			<div class="h478 pl_15 pr_15">
+				<ul class="navStep pt_15">
+					<li><a class="gray">配置设备信息</a>>></li>
+					<li><a class="gray">安装管理适配器</a>>></li>
+					<li><a class="gray">选择磁盘</a>>></li>
+					<li><a class="green">网络设置</a>>></li>
+					<li><a class="gray">安装服务</a></li>
+				</ul>
+
+				
+				<p class="mt_15 left">管理网络和数据网络可根据实际网卡数量或业务需要选择合并模式或者分离模式</p>
+				<p id="configSCBtn" class="btn btn_bg_blue small right clearfix">配置SoCache模块</p>
+
+				<div class="h32"></div>
+				
+				<div class="initTable mt_10 fb border lh_30">
+					<table class="initTable_header table_header_bg_green">
+						<thead>
+							<th class="w156">管理网络 IP</th>
+							<th class="w100">管理网络适配器</th>
+							<th class="w156">数据网络 IP</th>
+							<th class="w100">数据网络适配器</th>						
+							<th>配置网络模式</th>
+						</thead>
+					</table>
+					<table class="initTable_body fb">
+						<tbody>
+							<tr>
+								<td class="w156">192.168.20.101</td>
+								<td class="w100">eth0</td>
+								<td class="w156">192.168.20.102</td>
+								<td class="w100">eth1</td>
+								<td>
+									<span class="configModuleBtn fix">配置</span>
+									<ul class="configM hide">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>192.168.20.101</td>
+								<td>eth0</td>
+								<td>192.168.20.102</td>
+								<td>eth1</td>
+								<td>
+									<span class="configModuleBtn click fix">配置</span>
+									<ul class="configM">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>192.168.20.101</td>
+								<td>eth0</td>
+								<td>192.168.20.102</td>
+								<td>eth1</td>
+								<td>
+									<span class="configModuleBtn fix">配置</span>
+									<ul class="configM hide">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>192.168.20.101</td>
+								<td>eth0</td>
+								<td>192.168.20.102</td>
+								<td>eth1</td>
+								<td>
+									<span class="configModuleBtn fix">配置</span>
+									<ul class="configM hide">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>192.168.20.101</td>
+								<td>eth0</td>
+								<td>192.168.20.102</td>
+								<td>eth1</td>
+								<td>
+									<span class="configModuleBtn fix">配置</span>
+									<ul class="configM hide">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td>192.168.20.101</td>
+								<td>eth0</td>
+								<td>192.168.20.102</td>
+								<td>eth1</td>
+								<td>
+									<span class="configModuleBtn fix">配置</span>
+									<ul class="configM hide">
+										<li>合并模式</li>
+										<li class="separationModeBtn">分离模式</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>		
+
+			<div id="footer" class="h32 fb clearfix"><a class="left btn btn_bg_blue">上一步</a> <a class="right btn btn_bg_blue">下一步</a></div>
+		</div>
+	</div>
+
+<script src="../../js/common.js"></script>
+
+<script src="../../js/artDialog/jquery.artDialog.js"></script>
+<script src="../../js/init/imns.js"></script>
+</body>
+</html>

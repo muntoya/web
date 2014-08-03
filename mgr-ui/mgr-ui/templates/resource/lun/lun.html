@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/dev.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with lun_page=True %}
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon" id="createLun">创建</a>
+					<a class="edit_btn tBtn icon" id="updateLun">修改</a>
+					<a class="del_btn tBtn icon">删除</a>
+					<a class="start_btn tBtn icon">启动</a>
+					<a class="stop_btn tBtn icon">停止</a>
+					<a class="snapshot_btn tBtn icon" onclick="$('#snapshootUL').css('display', 'block')">快照</a>
+					<a class="socache_btn tBtn icon" onclick="$('#socacheUL').css('display', 'block')">SoCache加速</a>
+					<a class="config_btn tBtn icon" id="configInitiator">配置启动器</a>
+					<a class="config_btn tBtn icon" id="configVirtualServer">配置虚拟服务器</a>
+				</h2>
+				<div id="mainTable" class="panel_content tableContainer">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">5</i>
+							&nbsp;&nbsp;选中数：<i class="choose_num">0</i>
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th class="cbox"></th>
+							<th width="">名称</th>
+							<th width="10%">ID</th>
+							<th width="10%">可用容量</th>
+							<th width="10%">数据使用空间</th>
+							<th width="10%">快照使用空间</th>
+							<th width="10%">剩余容量</th>
+							<th width="10%">运行状态</th>
+							<th width="10%">是否映射</th>
+							<th class="w104">是否开启SoCache</th>
+						</thead>
+					</table>					
+					{% include "resource/lun/lun_list.html" %}										
+				</div>
+			</div>
+			<div id='itemInfo' class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a id="lun_detail" class="tBtn choose">详细信息</a>
+					<a id="lun_snapshot" class="tBtn">快照</a>
+				</h2>				
+				<div id="tabInfo" class="panel_content p_12_24 h150">
+				</div>
+			</div>			
+		</div>
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/table.operation.js' %}"></script>
+<script src="{% static 'js/resource/lun.js' %}"></script>
+</body>
+</html>

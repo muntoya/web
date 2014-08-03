@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/resource.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with resource_page=True %}
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">LUN</h2>
+				<div class="panel_content p_12_24 ov">
+					<table class="chart_table left w265">
+						<tbody>
+							<tr><td>LUN 总数：</td><td><i class="greeni">{{ lun_cnt }}</i></td></tr>
+							<tr><td>LUN 总容量：</td><td><i class="greeni">{{ lun_available }}</i>&nbsp;Mb</td></tr>
+							<tr><td>快照总数：</td><td><i class="greeni">{{ snapshot_cnt }}</i></td></tr>
+						</tbody>
+					</table>
+					<div class="h250 w_half" id="lun">							
+					</div>
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2 panel_common_bg_green">存储池</h2>
+				<div class="panel_content p_12_24 ov">
+					<table class="chart_table left w265">
+						<tbody>
+							<tr><td>存储池总数：</td><td><i class="greeni">{{ pool_cnt }}</i></td></tr>
+							<tr><td>存储池总容量：</td><td><i class="greeni">{{ pool_available }}</i>&nbsp;Mb</td></tr>
+						</tbody>
+					</table>
+					<div class="h250 w_half" id="pool">							
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/charts/echarts-plain.js' %}"></script>
+<script src="{% static 'js/resource/resource.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 命中率  读吞吐率  随机读IOPS
+ 40%    50MB/s    10,000 -->
+<div id="mainTable" class="panel_content tableContainer">
+	<table class="table_header contentTable_header_bg_green">
+		<thead>
+			<th>系统名称</th>
+			<th width="8%">IOPS</th>
+			<th width="8%">Mb/s</th>
+			<th width="8%">总容量</th>
+			<th width="8%">已用容量</th>
+			<th width="8%">剩余容量</th>
+			<th width="8%">命中率</th>
+			<th width="8%">读吞吐率</th>
+			<th width="10%">随机读IOPS</th>
+			<th class="w104">CPU平均占用率</th>
+			<th class="w104">内存平均占用率</th>
+		</thead>
+	</table>
+	<table class="table_body">
+		<tbody>
+			<tr>
+				<td>{{ cluster.sysname }}</td>
+				<td width="8%">{{ cluster.iops }}</td>
+				<td width="8%">{{ cluster.throughput }}</td>
+				<td width="8%">{{ cluster.total|floatformat:1 }}TB</td>
+				<td width="8%">{{ cluster.used|floatformat:2 }}TB</td>
+				<td width="8%">{{ cluster.free|floatformat:2 }}TB</td>
+				<td width="8%">{{ cluster.hitrate|floatformat:0 }}%</td>
+				<td width="8%">{{ cluster.readtp }}MB/s</td>
+				<td width="10%">{{ cluster.readiops }}</td>
+				<td class="w104">{{ cluster.cpu|floatformat:0 }}%</td>
+				<td class="w104">{{ cluster.memory|floatformat:0 }}%</td>
+			</tr>
+		</tbody>
+	</table>					
+</div>

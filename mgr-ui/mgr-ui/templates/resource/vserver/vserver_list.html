@@ -1,0 +1,13 @@
+<table class="table_body">
+	<tbody>
+		{% for vserver in vserver_list %}
+		<tr attr="{{ vserver.id }}">
+			<!-- <td class="cbox"></td> -->
+			<td>{{ vserver.name }}</td>
+			<td width="25%">{{ vserver.ip }}</td>
+			<td width="20%">{{ vserver.id }}</td>
+			<td width="20%">{{ vserver.vgroup }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/dev.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with initiator_page=True %}
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon" id="createInitiator">创建</a>
+					<a class="edit_btn tBtn icon" id="updateInitiator">修改</a>
+					<a class="del_btn tBtn icon">删除</a>
+					<a class="start_btn tBtn icon">CHAP</a>
+					<a class="add_btn tBtn icon">添加给LUN</a>
+					<a class="del_btn tBtn icon">移除启动器</a>
+				</h2>
+				<div id="mainTable" class="panel_content tableContainer">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">5</i>
+							<!-- &nbsp;&nbsp;选中数：<i class="choose_num">0</i> -->
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<!-- <th class="cbox"></th> -->
+							<th>标识</th>
+							<th width="25%">别名</th>
+							<th width="20%">HBA 卡类型</th>
+							<th width="20%">状态</th>
+						</thead>
+					</table>
+					{% include "resource/initiator/initiator_list.html" %}											
+				</div>
+			</div>
+			<div id='itemInfo' class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a id="init_detail" class="tBtn choose">详细信息</a>
+				</h2>
+				<div id="tabInfo" class="panel_content p_12_24 h150">
+				</div>
+			</div>
+		</div>
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/table.operation.js' %}"></script>
+<script src="{% static 'js/resource/initiator.js' %}"></script>
+</body>
+</html>

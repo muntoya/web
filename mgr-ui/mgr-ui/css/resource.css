@@ -1,0 +1,13 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("base.css");
+
+.chart_table{
+	line-height: 35px;
+}
+
+.chart_table tr td:first-child{
+	width: 100px;
+	/*text-align:right;*/
+	padding-right: 5px;
+}

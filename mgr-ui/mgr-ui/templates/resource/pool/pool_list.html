@@ -1,0 +1,15 @@
+<table class="table_body">
+	<tbody>
+		{% for pool in pool_list %}
+		<tr attr="{{ pool.id }}">
+			<!-- <td class="cbox"></td> -->
+			<td>{{ pool.name }}</td>
+			<td width="15%">{{ pool.available|floatformat:2 }}GB</td>
+			<td width="15%">{{ pool.used|floatformat:2 }}GB</td>
+			<td width="15%">{{ pool.free|floatformat:2 }}GB</td>
+			<td width="10%">{{ pool.useratio|floatformat:2 }}%</td>
+			<td width="15%">{% if pool.status == 1 %}在线{% else %}离线{% endif %}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

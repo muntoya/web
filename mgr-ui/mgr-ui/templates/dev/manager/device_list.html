@@ -1,0 +1,15 @@
+<table class="table_body">
+	<tbody>
+		{% for device in device_list %}
+		<tr>
+			<!-- <td class="cbox"></td> -->
+			<td width="15%">{{ device.ip }}</td>
+			<td width="15%">{% if device.type = 0 %}MDS{% else %}OSS{% endif %}</td>
+			<td width="10%">{% if device.status == 0 %}离线{% else %}在线{% endif %}</td>
+			<td width="20%">{{ device.cpu }}%</td>
+			<td width="15%">{{ device.disk }}%</td>
+			<td>{{ device.in|floatformat:1 }}/{{ device.out|floatformat:1 }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

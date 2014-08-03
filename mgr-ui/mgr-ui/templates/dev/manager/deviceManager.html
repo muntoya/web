@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/dev.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with manager_page=True %}
+
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon ">添加</a>
+					<a class="del_btn tBtn icon">删除</a>
+					<a class="start_btn tBtn icon">启动</a>
+					<a class="stop_btn tBtn icon">停止</a>
+					<a class="setup_btn tBtn icon" id="networkCard">网络设置</a>
+					<a class="extend_btn tBtn icon">硬盘扩展</a>
+				</h2>
+				<div id="mainTable" class="panel_content tableContainer">
+					<div class="table_title contentTable_header_bg_green">
+						<span>
+							总数：<i class="total_num">12</i>
+							<!-- &nbsp;&nbsp;选中数：<i class="choose_num">0</i> -->
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<!-- <th class="cbox"></th> -->
+							<th width="15%">服务器 IP</th>
+							<th width="15%">服务类型</th>
+							<th width="10%">状态</th>
+							<th width="20%">CPU 使用率</th>
+							<th width="15%">硬盘使用率</th>
+							<th>网络接收/发送(KB/S)</th>
+						</thead>
+					</table>
+					{% include 'dev/manager/device_list.html' %}					
+				</div>
+			</div>
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn choose">总体信息</a>
+					<a class="tBtn">硬盘信息</a>
+					<a class="tBtn">SSD</a>
+					<a class="tBtn">CPU 使用状况</a>
+					<a class="tBtn">内存使用状况</a>
+					<a class="tBtn">网络流量</a>
+				</h2>
+				<div class="panel_content p_12_24">
+					{% include 'dev/manager/device_detail.html' %}
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">总体信息</a>
+					<a class="tBtn choose">硬盘信息</a>
+					<a class="tBtn">SSD</a>
+					<a class="tBtn">CPU 使用状况</a>
+					<a class="tBtn">内存使用状况</a>
+					<a class="tBtn">网络流量</a>
+				</h2>
+				<!-- wwn  磁盘槽位  磁盘类型  容量大小 已用容量  所属存储池  吞吐率  IOPS  健康状态
+				123    1，2     SAS        2TB     100GB    pool1       100MB/s  10,000   正常 -->
+				<div class="panel_content">					
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th>wwn</th>
+							<th width="10%">硬盘槽位</th>
+							<th width="10%">硬盘类型</th>
+							<th width="10%">容量大小</th>
+							<th width="10%">已用容量</th>
+							<th width="10%">所属存储池</th>
+							<th width="10%">吞吐率</th>
+							<th width="10%">IOPS</th>
+							<th class="w94">健康状态</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td>123</td>
+								<td width="10%">1，2</td>
+								<td width="10%">SAS</td>
+								<td width="10%">2TB </td>
+								<td width="10%">100GB</td>
+								<td width="10%">pool1</td>
+								<td width="10%">100MB/s</td>
+								<td width="10%">10000</td>
+								<td class="w94">正常</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="10%">1，2</td>
+								<td width="10%">SAS</td>
+								<td width="10%">2TB </td>
+								<td width="10%">100GB</td>
+								<td width="10%">pool1</td>
+								<td width="10%">100MB/s</td>
+								<td width="10%">10000</td>
+								<td class="w94">正常</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="10%">1，2</td>
+								<td width="10%">SAS</td>
+								<td width="10%">2TB </td>
+								<td width="10%">100GB</td>
+								<td width="10%">pool1</td>
+								<td width="10%">100MB/s</td>
+								<td width="10%">10000</td>
+								<td class="w94">正常</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="10%">1，2</td>
+								<td width="10%">SAS</td>
+								<td width="10%">2TB </td>
+								<td width="10%">100GB</td>
+								<td width="10%">pool1</td>
+								<td width="10%">100MB/s</td>
+								<td width="10%">10000</td>
+								<td class="w94">正常</td>
+							</tr>							
+						</tbody>
+					</table>					
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">总体信息</a>
+					<a class="tBtn">硬盘信息</a>
+					<a class="tBtn choose">SSD</a>
+					<a class="tBtn">CPU 使用状况</a>
+					<a class="tBtn">内存使用状况</a>
+					<a class="tBtn">网络流量</a>
+				</h2>
+				<!-- wwn  磁盘槽位 磁盘类型 容量大小  命中率  读吞吐率  随机读IOPS
+					 123    1，3    SSD      10GB      40%    50MB/s    10,000 -->
+				<div class="panel_content">					
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th>wwn</th>
+							<th width="15%">硬盘槽位</th>
+							<th width="15%">硬盘类型</th>
+							<th width="15%">容量大小</th>
+							<th width="10%">命中率</th>
+							<th width="15%">读吞吐率</th>
+							<th width="15%">随机读IOPS</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td>123</td>
+								<td width="15%">1，3</td>
+								<td width="15%">SSD</td>
+								<td width="15%">10GB </td>
+								<td width="10%">40%</td>
+								<td width="15%">50MB/s</td>
+								<td width="15%">10000</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="15%">1，3</td>
+								<td width="15%">SSD</td>
+								<td width="15%">10GB </td>
+								<td width="10%">40%</td>
+								<td width="15%">50MB/s</td>
+								<td width="15%">10000</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="15%">1，3</td>
+								<td width="15%">SSD</td>
+								<td width="15%">10GB </td>
+								<td width="10%">40%</td>
+								<td width="15%">50MB/s</td>
+								<td width="15%">10000</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td width="15%">1，3</td>
+								<td width="15%">SSD</td>
+								<td width="15%">10GB </td>
+								<td width="10%">40%</td>
+								<td width="15%">50MB/s</td>
+								<td width="15%">10000</td>
+							</tr>							
+						</tbody>
+					</table>					
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15 ">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">总体信息</a>
+					<a class="tBtn">硬盘信息</a>
+					<a class="tBtn">SSD</a>
+					<a class="tBtn choose">CPU 使用状况</a>
+					<a class="tBtn">内存使用状况</a>
+					<a class="tBtn">网络流量</a>
+				</h2>
+				
+				<div class="ppanel_content p_12_24">					
+					<!-- <table class="chart_table left w265">
+						<tbody>
+							<tr><td>存储池总数：</td><td><i class="greeni">A</i></td></tr>
+							<tr><td>存储池总容量：</td><td><i class="greeni">C</i>&nbsp;Mb</td></tr>
+						</tbody>
+					</table> -->
+					<div class="w_all">
+						<div id="cpuInfo" class="w_all h250"></div>
+						<table class="lh_24 col2" style="margin:0 auto">
+							<tbody>
+								<tr>
+									<td class="t_dev"><div class="lenged idle_bg"></div></td>
+									<td>Idle</td>
+									<td class="space"></td>
+									<td class="t_dev">Now：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">AVG：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">MAX：</td>
+									<td>80%</td>
+								</tr>
+								<tr>								
+									<td class="t_dev"><div class="lenged user_bg"></div></td>
+									<td>User</td>
+									<td class="space"></td>
+									<td class="t_dev">Now：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">AVG：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">MAX：</td>
+									<td>80%</td>
+								</tr>
+								<tr>								
+									<td class="t_dev"><div class="lenged system_bg"></div></td>
+									<td>System</td>
+									<td class="space"></td>
+									<td class="t_dev">Now：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">AVG：</td>
+									<td>70%</td>
+									<td class="space"></td>
+									<td class="t_dev">MAX：</td>
+									<td>80%</td>
+								</tr>
+							</tbody>
+						</table>					
+					</div>					
+				</div>
+			</div>
+		
+		</div>
+
+		
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/charts/echarts-plain.js' %}"></script>
+<script src="{% static 'js/table.operation.js' %}"></script>
+<script src="{% static 'js/dev/devManager.js' %}"></script>
+
+</body>

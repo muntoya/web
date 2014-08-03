@@ -1,0 +1,37 @@
+<div id="aside" class="left">
+	<ul>
+		<li><a class="aside_btn_1 home {% if home_page %}a_choose{% endif %}" 
+			href="{% url 'home.views.home_page' %}">首页<span></span></a></li>
+		<li><a class="aside_btn_1 cm" href="cm/cm.html">系统配置<span></span></a></li>
+		<li><a class="aside_btn_1 resource 
+			{% if resource_page %}a_choose{% elif lun_page or pool_page or initiator_page or vserver_page %}a_choose_child{% endif %}"
+			href="{% url 'resource.views.resource_page' %}">存储资源&nbsp;&nbsp;
+			{% if resource_page or lun_page or pool_page or initiator_page or vserver_page %}-{% else %}+{% endif %}
+			<span></span></a></li> 
+		{% if resource_page or lun_page or pool_page or initiator_page or vserver_page %}
+		<ul id="aside_ul">
+			<li><a class="aside_li {% if lun_page %}a_choose{% endif %}" 
+			href="{% url 'resource.views.lun_page' %}"><i class="lun">&nbsp;</i>LUN<span></span></a></li>
+			<li><a class="aside_li {% if pool_page %}a_choose{% endif %}" 
+			href="{% url 'resource.views.pool_page' %}"><i class="pool">&nbsp;</i>存储池<span></span></a></li>
+			<li><a class="aside_li {% if initiator_page %}a_choose{% endif %}" 
+			href="{% url 'resource.views.initiator_page' %}"><i class="start">&nbsp;</i>启动器<span></span></a></li>
+			<li><a class="aside_li {% if vserver_page %}a_choose{% endif %}" 
+			href="{% url 'resource.views.vserver_page' %}"><i class="server">&nbsp;</i>虚拟服务器<span></span></a></li>
+		</ul>
+		{% endif %}
+		
+		<li><a class="aside_btn_1 dev
+			{% if device_page %}a_choose{% elif manager_page or socache_page%}a_choose_child{% endif%}"
+			 href="{% url 'device.views.device_page' %}">设备信息&nbsp;&nbsp;
+			{% if device_page or manager_page or socache_page %}-{% else %}+{% endif %}<span></span></a></li>
+		{% if device_page or manager_page or socache_page %}
+		<ul id="aside_ul">
+			<li><a class="aside_li {%if manager_page %}a_choose{% endif %}"
+			href="{% url 'device.views.manager_page' %}"><i class="device">&nbsp;</i>设备管理<span></span></a></li>
+			<li><a class="aside_li {%if socache_page %}a_choose{% endif %}" 
+			href="socache.html"><i class="socache">&nbsp;</i>socache<span></span></a></li>
+		</ul>
+		{% endif %}
+	</ul>
+</div>

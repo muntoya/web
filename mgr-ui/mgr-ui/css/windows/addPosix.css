@@ -1,0 +1,221 @@
+.aui_content {
+	width: 100%;
+}
+
+/* 弹框的宽度设定 */
+.w436 {
+	width: 436px;
+}
+
+.wContent {
+	margin: 20px 25px;
+}
+
+/* 宽度设置 100% */
+.w_100 {
+	width: 100%;
+}
+
+/* 弹框标题样式 */
+.wTitle {
+	color: #76b8ef;
+}
+
+/* 弹框的标题横线样式 */
+.whr {
+	border-bottom: 1px solid #61aded;
+	width: 100%;
+	height: 1px;
+}
+
+/* 表格附加样式 */
+.w_green_table {
+	margin: 10px 10px;
+	border: 1px solid #e2e1e1;
+	text-align: center;
+} 
+
+/* .table_body tr th {
+	height: 29px;
+} */
+
+.green_table2 {
+	margin: 3px 10px 6px 10px;
+}
+
+/* 弹框的内部标题 */
+.wTitleDiv {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+/* 弹框表格导航样式 */
+.w_table_title {
+	line-height: 33px;
+	background: #ceebb4;
+	text-align: left;
+}
+
+.table_title2 {
+	margin-left: 0px;
+}
+
+/* 弹框表格的标题样式 */
+.w_table_header{
+	background: #eef9e3;
+	color: #376f01;
+	line-height: 27px;
+}
+
+.table_body2{
+	line-height: 30px;
+	width: 100%;
+}
+
+.table_body2 .layoutTop {
+	vertical-align: top;
+}
+
+.table_span {
+	/* background: #f4f4f4; */
+	/* background: #ffff00; */
+	background: #EEEEEE;
+	width: 100%;
+	height: 24px;
+}
+
+.table_tip {
+	color: #dcdcdc;
+}
+
+/* 弹框的搜索框样式 */
+.search_div input[type="text"] {
+	background: #dcf3c8;
+}
+
+.search_div input[type="button"]{
+	background: url(../../img/searchGreen.png) no-repeat center center #dcf3c8;
+	float: left;
+	width: 24px;
+}
+
+.aui_title {
+	display: block;
+}
+
+/* 弹框关闭按钮样式 */
+.aui_close {
+	display: block;
+	background: url(../../img/close.png) no-repeat;
+    height: 16px;
+    right: 12px;
+    text-indent: -9999em;
+    top: 6px;
+    width: 16px;
+    position: absolute;
+}
+
+.aui_close:hover {
+
+}
+
+.aui_close:active { 
+	box-shadow: none;
+}
+
+/* 弹框中按钮的样式 */
+.wBtn {
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 5px 22px;
+    margin: 15px 20px;
+    background: #61ADEB;
+    cursor: pointer;
+}
+
+.wBtn2 {
+	margin: 20px 8px;
+}
+
+/* .wBtn3 {
+	margin: 5px;
+	float: right;
+} */
+
+/* 清除浮动 */
+.clear {
+	clear: both;
+}
+
+.aui_header .aui_buttons button {
+	font-family: "微软雅黑", verdana, sans-serif; font-size: 12px;
+}
+
+/* 弹框的 ul 样式 */
+.wUL {
+	line-height: 24px;
+	margin: 10px 20px;
+}
+
+.wTop15 {
+	margin-top: 15px;
+}
+
+.wSubDescribe {
+	margin-bottom: 8px;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.btn_title a {
+	position: relative;
+}
+
+.btn_title p {
+	position: relative;
+}
+
+.btn_title .snapshootUL{
+	position: absolute;
+	line-height: 30px;
+	background: #CEEBB4;
+	left: 450px;
+	top: 100px;
+}
+
+.btn_title .socacheUL{
+	position: absolute;
+	line-height: 30px;
+	background: #CEEBB4;
+	left: 500px;
+	top: 100px;
+}
+
+/* .btn_title li {
+	float: left;
+	position: relative;
+	line-height: 30px;
+}
+
+.btn_title ul li {
+	clear: both;
+	line-height: 30px;
+	background: #CEEBB4;
+	width: 100%;
+} */
+
+/* 下拉菜单 */
+.dropdown {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 100px;
+	
+}

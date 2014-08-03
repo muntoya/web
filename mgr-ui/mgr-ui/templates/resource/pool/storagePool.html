@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/dev.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with pool_page=True %}
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon" id="createStoragePool">创建</a>
+					<a class="edit_btn tBtn icon" id="updateStoragePool">修改</a>
+					<a class="del_btn tBtn icon">删除</a>
+					<a class="start_btn tBtn icon">启动</a>
+					<a class="stop_btn tBtn icon">停止</a>
+					<a class="add_btn tBtn icon">创建LUN</a>
+				</h2>
+				<div id="mainTable" class="panel_content tableContainer">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">5</i>
+							<!-- &nbsp;&nbsp;选中数：<i class="choose_num">0</i> -->
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<!-- <th class="cbox"></th> -->
+							<th>名称</th>
+							<th width="15%">可用容量</th>
+							<th width="15%">已用容量</th>
+							<th width="15%">剩余容量</th>
+							<th width="10%">利用率</th>
+							<th width="15%">运行状态</th>
+						</thead>
+					</table>					
+					{% include "resource/pool/pool_list.html" %}											
+				</div>
+			</div>
+			<div id='itemInfo' class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a id="pool_detail" class="tBtn choose">详细信息</a>
+					<a id="pool_lun" class="tBtn">LUN</a>
+					<a id="pool_disk" class="tBtn">硬盘信息</a>
+				</h2>
+				<div id="tabInfo" class="panel_content p_12_24 h150">
+				</div>
+			</div>
+
+			<!-- <div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">详细信息</a>
+					<a class="tBtn choose">LUN</a>
+					<a class="tBtn">硬盘信息</a>
+				</h2>				
+				{% include "resource/pool/pool_lun.html" %}
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">详细信息</a>
+					<a class="tBtn">LUN</a>
+					<a class="tBtn choose">硬盘信息</a>
+				</h2>				
+				{% include "resource/pool/pool_disk.html" %}
+			</div> -->
+		</div>
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/table.operation.js' %}"></script>
+<script src="{% static 'js/resource/stroagePool.js' %}"></script>
+</body>
+</html>

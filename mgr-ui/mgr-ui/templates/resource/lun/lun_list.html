@@ -1,0 +1,18 @@
+<table class="table_body">
+	<tbody>
+		{% for lun in lun_list %}
+		<tr attr="{{ lun.id }}">
+			<td class="cbox"></td>
+			<td width="">{{ lun.name }}</td>
+			<td width="10%">{{ lun.id }}</td>
+			<td width="10%">{{ lun.available|floatformat:2 }}GB</td>
+			<td width="10%">{{ lun.free|floatformat:2 }}GB</td>
+			<td width="10%">{{ lun.dataspace|floatformat:2 }}GB</td>
+			<td width="10%">{{ lun.snapshotspace|floatformat:2 }}GB</td>
+			<td width="10%">{% if lun.status == 1 %}在线{% else %}离线{% endif %}</td>
+			<td width="10%">{% if lun.maped == 1 %}是{% else %}否{% endif %}</td>
+			<td class="w104">{% if lun.socache == 1 %}是{% else %}否{% endif %}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>

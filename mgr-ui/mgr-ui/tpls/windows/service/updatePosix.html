@@ -1,0 +1,95 @@
+<div class="wContent w436">
+	<div>
+		<div class="w_100">
+			<table class="w_100">
+				<tr>
+					<td width="60px"><span class="wTitle">基本信息</span></td>
+					<td><div class="whr"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="green_table2">
+			<table class="table_body2">
+				<tr>
+					<td width="150px;">访问名称:</td>
+					<td>posix1</td>
+				</tr>
+				<tr>
+					<td>文件卷名称:</td>
+					<td>vol1</td>
+				</tr>
+				<tr>
+					<td>文件卷容量:</td>
+					<td>100GB</td>
+				</tr>
+			</table>
+		</div>	
+	</div>
+	<div>
+		<div class="w_100">
+			<table class="w_100">
+				<tr>
+					<td width="50px"><span class="wTitle">客户端</span></td>
+					<td><div class="whr"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="green_table2">
+			<table class="table_body2">
+				<tr>
+					<td width="90px;">客户端 IP 地址:</td>
+					<td>
+						<input type="text" class="table_span" value="192.168.1.1">
+					</td>
+				</tr>
+				<tr>
+					<td>导出目录:</td>
+					<td>
+						<input type="text" class="table_span" value="F:/">
+					</td>
+				</tr>
+				<tr>
+					<td>访问方式:</td>
+					<td>
+						<input type="radio" name="accessMode" checked>&nbsp;读写
+						<input type="radio" name="accessMode">&nbsp;只读
+					</td>
+				</tr>
+				<tr>
+					<td>用户权限:</td>
+					<td>
+						<ul>
+							<li>
+								<input type="radio" name="userRight" checked>&nbsp;不映射任何用户
+							</li>
+							<li>
+								<input type="radio" name="userRight">&nbsp;映射 root 用户
+							</li>
+							<li>
+								<input type="radio" name="userRight">&nbsp;映射全部用户
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="layoutTop">客户端缓存:</td>
+					<td>
+						<ul>
+							<li>
+								<input type="radio" name="clientCache" checked>&nbsp;无缓存
+							</li>
+							<li>
+								<table class="table_body2">
+									<tr>
+										<td width="70px"><input type="radio" name="clientCache">&nbsp;有缓存&nbsp;&nbsp;</td>
+										<td><input type="text" class="table_span table_tip" value="请输入缓存大小"></td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

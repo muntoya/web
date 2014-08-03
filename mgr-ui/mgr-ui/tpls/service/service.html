@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Yeestor Login</title>
+<script language="javascript" type="text/javascript" src="../../js/jquery.js"></script>
+<script src="../../js/charts/esl/esl.js"></script>
+
+<link type="text/css" rel="stylesheet" href="../../css/base.css">
+<link type="text/css" rel="stylesheet" href="../../css/cm.css">
+
+
+</head>
+<body>
+	<div id="header_html">		
+		<div class="wrap_header">
+			<a class="logo_yeestor">&nbsp;</a>			
+			<a id="logoutBtn" class="log_button"><span class="logout_btn">&nbsp;</span><span class="log_button_context">注销</span></a>
+			<a id="usernameBtn" class="log_button"><span class="username_btn">&nbsp;</span><span class="log_button_context">DaoWoo</span></a>
+		</div>
+	</div>
+	
+	<div id="body_html">
+		<div id="aside">
+			<a class="aside_item"><i class="home_aside">&nbsp;</i>首页</a>
+			<a class="aside_item"><i class="config_aside">&nbsp;</i>系统配置</a>
+			<a class="aside_item_choose"><i class="server_aside">&nbsp;</i>存储服务 -</a>
+			<ul class="aside_ul">
+				<li><a href="" class="aside_li"><i class="device_1">&nbsp;</i>POSIX  服务</a></li>
+				<li><a href="" class="aside_li"><i class="device_1">&nbsp;</i>NFS 导出</a></li>
+				<li><a href="" class="aside_li"><i class="device_2">&nbsp;</i>SAN 服务</a></li>
+				<li><a href="" class="aside_li"><i class="device_2">&nbsp;</i>虚拟服务器</a></li>
+			</ul>
+			<a class="aside_item"><i class="resource_aside">&nbsp;</i>存储资源 +</a>
+			<a class="aside_item"><i class="device_aside">&nbsp;</i>设备信息 +</a>			
+		</div>
+
+		<div id="main_info">
+			<div class="green_panel bottom">
+				<p class="title green">总体信息</p>
+				<div class="info">
+					<div class="chart_container">
+						<div class="green_panel w265 left">
+							<p class="title gray">IOPS 时间变化曲线</p>
+							<div class="info gray_info">
+								<table class="chart_table left">
+									<tbody>
+										<tr><td>当前值：</td><td><i class="greeni">210</i>&nbsp;KB/S</td></tr>
+										<tr><td>平均值：</td><td><i class="greeni">200</i></td></tr>
+										<tr><td>最大值：</td><td><i class="greeni">270</i></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="chart left">
+							<div class="date_chart">
+								<a>过去一小时</a>
+								<a>过去一天</a>
+								<a>过去一周</a>
+								<a>过去一月</a>
+							</div>
+							<div class="chart_div" id="iops">							
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="chart_container">
+						<div class="green_panel w265 left">
+							<p class="title gray">吞吐量时间变化曲线</p>
+							<div class="info gray_info">
+								<table class="chart_table left">
+									<tbody>
+										<tr><td>当前值：</td><td><i class="greeni">210</i>&nbsp;KB/S</td></tr>
+										<tr><td>平均值：</td><td><i class="greeni">200</i></td></tr>
+										<tr><td>最大值：</td><td><i class="greeni">270</i></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>						
+						<div class="chart left">
+							<div class="date_chart">
+								<a>过去一小时</a>
+								<a>过去一天</a>
+								<a>过去一周</a>
+								<a>过去一月</a>
+							</div>
+							<div class="chart_div" id="throughput">							
+							</div>
+						</div>
+					</div>
+
+					<div class="chart_container">
+						<div class="green_panel w265 left">
+							<p class="title gray">POSIX 访问 IOPS</p>
+							<div class="info gray_info">
+								<table class="chart_table left">
+									<tbody>
+										<tr><td>当前值：</td><td><i class="greeni">210</i>&nbsp;KB/S</td></tr>
+										<tr><td>平均值：</td><td><i class="greeni">200</i></td></tr>
+										<tr><td>最大值：</td><td><i class="greeni">270</i></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="chart left">
+							<div class="date_chart">
+								<a>过去一小时</a>
+								<a>过去一天</a>
+								<a>过去一周</a>
+								<a>过去一月</a>
+							</div>
+							<div class="chart_div" id="p_iops">							
+							</div>
+						</div>
+					</div>
+
+					<div class="chart_container">
+						<div class="green_panel w265 left">
+							<p class="title gray">POSIX 访问吞吐量</p>
+							<div class="info gray_info">
+								<table class="chart_table left">
+									<tbody>
+										<tr><td>当前值：</td><td><i class="greeni">210</i>&nbsp;KB/S</td></tr>
+										<tr><td>平均值：</td><td><i class="greeni">200</i></td></tr>
+										<tr><td>最大值：</td><td><i class="greeni">270</i></td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="chart left">
+							<div class="date_chart">
+								<a>过去一小时</a>
+								<a>过去一天</a>
+								<a>过去一周</a>
+								<a>过去一月</a>
+							</div>
+							<div class="chart_div" id="p_throughput">							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>	
+			
+	</div>
+<script src="../../js/greentable.js"></script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths:{ 
+            'echarts' : '../../js/charts/echarts-original',            
+            'echarts/chart/line': '../../js/charts/echarts-original',
+            'echarts/chart/bar': '../../js/charts/echarts-original'
+        }
+    });
+
+    // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
+                'echarts/chart/bar'
+            ],
+            function(ec) {
+                // 基于准备好的dom，初始化echarts图表
+               var iops = ec.init(document.getElementById('iops'));
+               var throughput = ec.init(document.getElementById('throughput'));
+                
+               option1 = {
+				    tooltip : {
+				        trigger: 'axis'
+				    },
+				    legend: {
+				    	orient : 'horizontal',
+				        y : 'bottom',
+				        borderWidth: '1',
+				       /* textStyle:{color: 'auto'},*/
+				        data:['读 IPOS','写 IPOS','总 IPOS']
+				    },				    
+				    grid:{
+				    	/*x: '30',*/
+				    	y: '10',
+				    	backgroundColor:'#fff'				    	
+				    },
+				    xAxis : [
+				        {
+				            type : 'category',
+				            boundaryGap : false,
+				            axisLine:{color:'#D7FFCC', type:'solid',width:'2'},
+				            data : ['16:00','16:10','16:20','16:30','16:40','16:50','16:60']
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value',
+				            /*splitArea : {show : true}*/
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'读 IPOS',
+				            type:'line',				            				            
+				            data:[120, 132, 101, 134, 90, 230, 210]
+				        },
+				        {
+				            name:'写 IPOS',
+				            type:'line',				            
+				            data:[220, 182, 191, 234, 290, 330, 310]
+				        },
+				        {
+				            name:'总 IPOS',
+				            type:'line',				            
+				            data:[150, 232, 201, 154, 190, 330, 410.222]
+				        }
+				    ]
+				};
+
+				option3 = {
+				    /*title : {
+				        text: '某楼盘销售情况'
+				    },*/
+				    tooltip : {
+				        trigger: 'axis'
+				    },
+				    legend: {
+				        data:['意向','预购','成交']
+				    },				    
+				    xAxis : [
+				        {
+				            type : 'category',
+				            boundaryGap : false,
+				            data : ['周一','周二','周三','周四','周五','周六','周日']
+				        }
+				    ],
+				    yAxis : [
+				        {
+				            type : 'value'
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'成交',
+				            type:'line',
+				            /*smooth:true,*/
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[10, 12, 21, 54, 260, 830, 710]
+				        },
+				        {
+				            name:'预购',
+				            type:'line',
+				            /*smooth:true,*/
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[30, 182, 434, 791, 390, 30, 10]
+				        },
+				        {
+				            name:'意向',
+				            type:'line',
+				            /*smooth:true,*/
+				            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+				            data:[1320, 1132, 601, 234, 120, 90, 20]
+				        }
+				    ]
+				};
+        
+                // 为echarts对象加载数据 
+                iops.setOption(option1);
+                throughput.setOption(option3);
+
+                var p_iops = ec.init(document.getElementById('p_iops'));
+                var p_throughput = ec.init(document.getElementById('p_throughput'));
+
+                option2 = {
+				    tooltip: {
+                        show: true
+                    },
+                    /*legend: {
+                        data:['销量']
+                    },*/
+                    grid:{
+				    	/*x: '30',*/
+				    	y: '10'				    	
+				    },
+                    xAxis : [
+                        {
+                            type : 'category',                            
+                            data : ["ap1","ap2","ap3","ap4","ap5","ap6"]
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value'
+                        }
+                    ],
+                    series : [
+                        {
+                            "name":"",
+                            "type":"bar",
+                            "data":[5, 20, 40, 10, 10, 20]
+                        }
+                    ]
+				};
+
+				p_iops.setOption(option2);
+                p_throughput.setOption(option2);
+            }
+        );
+</script>	
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>YeeStor</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" href="../../css/dev.css" type="text/css" media="screen" charset="utf-8">
+	<!-- <link type="text/css" rel="stylesheet" href="../../css/dialog/default.css">
+	<link type="text/css" rel="stylesheet" href="../../css/windows/addPosix.css"> -->
+	<script src="../../js/jquery.js"></script>
+</head>
+<body class="bodyCommon">
+	<div id="header">
+		<a class="logo left" href="home.html" alt="YeeStor">YeeStor</a>
+		<a class="header_btn logout right">注销</a>
+		<a class="header_btn user right">DaoWoo</a>		
+	</div>
+	<div id="body">
+		<div id="aside" class="left">
+			<ul>
+				<li><a class="aside_btn_1 home" href="../home.html">首页<span></span></a></li>
+				<li><a class="aside_btn_1 cm" href="../cm/cm.html">系统配置<span></span></a></li>
+				<li><a class="aside_btn_1 resource a_choose_child" href="resource.html">存储资源&nbsp;&nbsp;-<span></span></a></li>
+				<ul id="aside_ul">
+					<li><a class="aside_li" href="lun.html"><i class="lun">&nbsp;</i>LUN<span></span></a></li>
+					<li><a class="aside_li" href="storagePool.html"><i class="pool">&nbsp;</i>存储池<span></span></a></li>
+					<li><a class="aside_li a_choose" href="initiator.html"><i class="start">&nbsp;</i>启动器<span></span></a></li>
+					<li><a class="aside_li" href="virtualServer.html"><i class="server">&nbsp;</i>虚拟服务器<span></span></a></li>
+				</ul>
+				<li><a class="aside_btn_1 dev" href="../dev/dev.html">设备信息&nbsp;&nbsp;+<span></span></a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon" id="createInitiator">创建</a>
+					<a class="edit_btn tBtn icon" id="updateInitiator">修改</a>
+					<a class="del_btn tBtn icon">删除</a>
+					<a class="start_btn tBtn icon">CHAP</a>
+					<a class="add_btn tBtn icon">添加给LUN</a>
+					<a class="del_btn tBtn icon">移除启动器</a>
+				</h2>
+				<div class="panel_content tableContainer">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">5</i>
+							&nbsp;&nbsp;选中数：<i class="choose_num">0</i>
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th class="cbox"></th>
+							<th>标识</th>
+							<th width="25%">别名</th>
+							<th width="20%">HBA 卡类型</th>
+							<th width="20%">状态</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td class="cbox"></td>
+								<td>1111111111111111111111</td>
+								<td width="25%">FCInitiator001</td>
+								<td width="20%">FC</td>
+								<td width="20%">未连接</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td>aaaaaaaaaaaa</td>
+								<td width="25%">FCInitiator002</td>
+								<td width="20%">FC</td>
+								<td width="20%">已连接</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td>bbbbbbbbbbbbbbbbbb</td>
+								<td width="25%">FCInitiator003</td>
+								<td width="20%">FC</td>
+								<td width="20%">已连接</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td>cccccccccccccccccc</td>
+								<td width="25%">FCInitiator004</td>
+								<td width="20%">FC</td>
+								<td width="20%">已连接</td>
+							</tr>
+							<tr>
+								<td class="cbox"></td>
+								<td>ddddddddddd</td>
+								<td width="25%">IscsiInitiator</td>
+								<td width="20%">ISCSI</td>
+								<td width="20%">已连接</td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+			</div>
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn choose">详细信息</a>
+				</h2>
+				<div class="panel_content p_12_24">
+					<table class="lh_30 w_70 col2 ">
+						<tbody>
+							<tr>
+								<td class="t">标识：</td>
+								<td>1111111111111111111111</td>
+								<td class="space"></td>
+								<td class="t">别名：</td>
+								<td>FCInitiator001</td>
+							</tr>
+							<tr>
+								<td class="t">HBA 卡型：</td>
+								<td>FC</td>
+								<td class="space"></td>
+								<td class="t">CHAP 数量：</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td class="t">状态：</td>
+								<td>未连接</td>
+							</tr>
+							<tr>
+								<td class="t">CHAP 启动状态：</td>
+								<td>未启动</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="../../js/common.js"></script>
+<script src="../../js/greentable.js"></script>
+<!-- <script src="../../js/resource/initiator.js"></script> -->
+</body>
+</html>

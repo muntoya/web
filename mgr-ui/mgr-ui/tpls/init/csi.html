@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0.1//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>YeeStor 管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" href="../../css/init.css" type="text/css" media="screen" charset="utf-8">
+</head>
+<body class="bodyInit">
+	<div id="header">
+		<div class="w900 h43 center">
+			<h1 class="header_title"><img id="initlogo" src="../../img/init/logo_9_6.png">欢迎使用 YeeStor 管理系统，请先进行系统安装和初始化</h1>
+		</div>
+	</div>
+
+	<div id="body" class="w878 center p11 clearfix">
+		<div id="aside" class="w146 border h400 bg left">
+			<ol class="aside_ol">
+				<li class="aside_csi aside_choose"><p class="aside_ol_order">1.</p><p class="aside_ol_title">配置系统信息</p><span></span></li>
+				<li class="aside_ims"><p class="aside_ol_order">2.</p><p class="aside_ol_title">安装管理服务</p><span></span></li>
+				<li class="aside_oss"><p class="aside_ol_order">3.</p><p class="aside_ol_title">安装存储服务</p><span></span></li>
+			</ol>
+		</div>
+
+		<div id="content" class="border bg h535">
+			<div class="h463 pl_15 pr_15 pt_15">
+				<table class="w_all lh_40">
+					<tbody>
+						<tr>
+							<td class="w104"><i class="red">*</i>系统名称</td>
+							<td colspan="3"><input type="text" class="input_text input_bg_gray_1 w_all" placeholder="支持汉字，字母和数字，最多20个字符"></td>
+						</tr>
+						<tr>
+							<td class="w104"><i class="red">*</i>导入Lisence文件</td>
+							<td><input type="text" class="input_text input_bg_gray_1 w_all"></td>
+							<td class="w75"><p class="btn btn_bg_green small ml_15 pt_5">浏览</p></td>
+							<td class="w75"><p class="btn btn_bg_green small ml_15 pt_5">查看</p></td>
+						</tr>
+						<tr>
+							<td class="w104">导入系统配置文件</td>
+							<td colspan="2"><input type="text" class="input_text input_bg_gray_1 w_all"></td>
+							<td class="w75"><p class="btn btn_bg_green small ml_15 pt_5">浏览</p></td>
+						</tr>
+						<tr>
+							<td class="w104">NTP 服务地址</td>
+							<td colspan="3"><input type="text" class="input_text input_bg_gray_1 w_all"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="left panel w_40 mt_15 fb h261">
+					<h2 class="panel_h2 panel_bg_green"><i class="red">*</i>管理员信息配置</h2>
+					<div class="panel_content ssh">
+						<table class="w_all lh_40">
+							<tbody>
+								<tr>
+									<td class="w56">用户名</td>
+									<td><input type="text" class="input_text input_bg_gray w_all"></td>
+								</tr>
+								<tr>
+									<td class="w56">登录密码</td>
+									<td ><input type="text" class="input_text input_bg_gray w_all"></td>
+								</tr>
+								<tr>
+									<td class="w56">确认密码</td>
+									<td ><input type="text" class="input_text input_bg_gray w_all"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="right panel w_60 mt_15 fb">
+					<h2 class="panel_h2 panel_bg_green">邮件服务器配置</h2>
+					<div class="panel_content ssh">
+						<table class="w_all lh_40">
+							<tbody>
+								<tr>
+									<td class="w94 lh_30 va">发送邮件服务器<p class="lh_15">(SMTP)</p></td>
+									<td><input type="text" class="input_text input_bg_gray w_all"></td>
+								</tr>
+								<tr>
+									<td class="w94">发送方邮件地址</td>
+									<td ><input type="text" class="input_text input_bg_gray w_all"></td>
+								</tr>								
+							</tbody>
+						</table>
+						<fieldset class="mt_15">
+							<legend class="w_all"><span class="left fd_lg_sp"><input class="input_cb" type="checkbox"/>SMTP身份验证</span><hr class="line"></legend>
+							<div class="pl_15 pr_15 mt_10">
+								<input class="input_text input_bg_gray w_all" type="text" placeholder="用户名"/>
+								<input class="input_text input_bg_gray w_all mt_10" type="text" placeholder="密码"/>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				
+			</div>
+
+			<div id="footer" class="h32 fb clearfix"><a class="right btn btn_bg_blue">下一步</a></div>
+		</div>
+	</div>
+</body>
+</html>

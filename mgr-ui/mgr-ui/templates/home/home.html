@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/home.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with home_page=True %}
+		<div id="content">
+			<div class="left w_40">
+				<div class="panel w_all">
+					<h2 class="panel_h2 panel_common_bg_green">系统概况</h2>
+					<div id="sysInfo" class="panel_content p_6_24">
+						{% include "home/baseinfo.html" %}
+					</div>
+				</div>				
+				<div class="panel w_all mt_13">
+					<h2 class="panel_h2 panel_common_bg_green">存储资源</h2>
+					<div class="panel_content p_6_24_15">
+						<table class="w_all lh_35">
+							<tbody>
+								<tr><td class="w65">LUN总数：</td><td class="input_c_green">{{ lun_cnt }}</td><td class="w80">存储池总数：</td><td class="input_c_green">{{ pool_cnt }}</td></tr>
+							</tbody>
+						</table>
+						<fieldset class="mt_5">
+							<legend class="w_all"><span class="left fieldest_lenged_blue">存储资源容量统计(/GB)</span><hr class="hr"></legend>
+							<div class="ov">
+								<div class="left h196 w_half" id="pool">
+								</div>
+								<div class="right h196 w_half" id="lun">
+								</div>
+							</div>
+						</fieldset>						
+					</div>
+				</div>
+			</div>
+
+			<div class="right w_60">
+				<div class="panel w_all">
+					<h2 class="panel_h2 panel_common_bg_green">统计数据</h2>
+					<div class="panel_content p_12_24 ov">
+						<p class="left h168 w_10">吞吐率</p>
+						<div class="right h168 w_90" id="tp">							
+						</div>
+						<p class="left h168 w_10">IOPS</p>
+						<div class="right h168 w_90" id="sr">							
+						</div>						
+					</div>
+				</div>
+
+				<div class="panel w_all mt_13">
+					<h2 class="panel_h2 panel_common_bg_green">报警 <a class="panel_title_link">更多>></a></h2>
+					<div id="warning" class="panel_content">
+						{% include "home/warning.html" %}
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+{% load static %}
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/charts/echarts-plain.js' %}"></script>
+<script src="{% static 'js/jquery.cookie.js' %}"></script>
+<script src="{% static 'js/json2.js' %}"></script>
+<script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

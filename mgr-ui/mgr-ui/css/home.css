@@ -1,0 +1,32 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("base.css");
+
+.capDiv{background: none repeat scroll 0 0 #FAF8F8; border: 1px solid #E1E1E1; height: 152px;}
+.capDiv_chart tr td:first-child{width: 54px;}
+.capDiv_chart_allpro{background-color: #EDEDED;height: 17px; line-height: 17px;}
+.capDiv_chart_allpro > em{float: right; text-align: right; padding-right: 5px;}
+.capDiv_chart_ingpro{background-color: #C0E5EB; width: 32%; float: left; text-align: left; padding-left: 5px;}
+
+.square{padding-left: 17px; margin-right: 5px;}
+.blueSquare{background-color: #C0E5EB;}
+.graySquare{background-color: #ededed;}
+
+.t_gray{color:#b7b6b6;}
+
+.warn_leftTabl tr td:first-child{text-align: right;}
+.more_button{display: block; text-align: center; background-color: #f2f1f1; color: #9b9b9b; height: 20px; margin: 4px; line-height: 20px; cursor: pointer;}
+
+.warn_rightTabl{table-layout:fixed;}
+.warn_rightTabl tr td:first-child{text-align: right; width:66px;}
+.warn_rightTabl td{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.warn_rightTabl tr td:last-child{width:40px;}
+
+.hr{margin-left: 10px; border-top: 1px solid #224f94;border-left: none; border-right: none; border-bottom: none;}
+
+.edit{float: right; margin-right: 10px; color: #c7c7c7; cursor: pointer;}
+.edit:active{color:#569e01;}
+.edit:hover{color:#72D101;}
+
+
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>YeeStor</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" href="../../css/dev.css" type="text/css" media="screen" charset="utf-8">
+	<script src="../../js/jquery.js"></script>
+</head>
+<body class="bodyCommon">
+	<div id="header">
+		<a class="logo left" href="home.html" alt="YeeStor">YeeStor</a>
+		<a class="header_btn logout right">注销</a>
+		<a class="header_btn user right">DaoWoo</a>		
+	</div>
+	<div id="body">
+		<div id="aside" class="left">
+			<ul>
+				<li><a class="aside_btn_1 home" href="../home.html">首页<span></span></a></li>
+				<li><a class="aside_btn_1 cm" href="../cm.html">系统配置<span></span></a></li>
+				<li><a class="aside_btn_1 resource" href="../resource/resource.html">存储资源&nbsp;&nbsp;+<span></span></a></li>
+				<li><a class="aside_btn_1 dev a_choose_child" href="dev.html">设备信息&nbsp;&nbsp;-<span></span></a></li>
+				<ul id="aside_ul">
+					<li><a class="aside_li" href="deviceManager.html"><i class="device">&nbsp;</i>设备管理<span></span></a></li>
+					<li><a class="aside_li a_choose" href="socache.html"><i class="socache">&nbsp;</i>socache<span></span></a></li>
+				</ul>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div class="panel w_all tableContainer">
+				<h2 class="panel_h2 panel_common_bg_green">
+					<a class="add_btn tBtn icon ">创建</a>
+					<a class="del_btn tBtn icon">删除</a>
+				</h2>
+				<div id="mainTable" class="panel_content tableContainer">
+					<div class="table_title">
+						<span>
+							总数：<i class="total_num">12</i>
+							<!-- &nbsp;&nbsp;选中数：<i class="choose_num">0</i> -->
+						</span>
+						<div class="search_div">
+							<input type="text">
+							<input type="button" class="search">
+						</div>
+					</div>
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<!-- <th class="cbox"></th> -->
+							<th>名称</th>
+							<th width="20%">所在设备IP</th>
+							<th width="10%">SSD数量</th>
+							<th width="10%">总容量</th>
+							<th width="15%">已用容量</th>
+							<th width="10%">是否LUN访问</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<!-- <td class="cbox"></td> -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+							<tr>
+								<!-- td class="cbox"></td -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+							<tr>
+								<!-- <td class="cbox"></td> -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+							<tr>
+								<!-- <td class="cbox"></td> -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+							<tr>
+								<!-- <td class="cbox"></td> -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+							<tr>
+								<!-- <td class="cbox"></td> -->
+								<td>socache1</td>
+								<td width="20%">192.168.20.101</td>
+								<td width="10%">4</td>
+								<td width="10%">5.3T</td>
+								<td width="15%">2.2TB</td>
+								<td width="10%">是</td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+			</div>
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn choose">详细信息</a>
+					<a class="tBtn">SSD盘</a>
+					<a class="tBtn">LUN访问</a>
+				</h2>
+				<div class="panel_content">
+					<table class="lh_30 w_70 col2 ">
+						<tbody>
+							<tr>
+								<td class="t">名称：</td>
+								<td>pool1</td>
+							</tr>
+							<tr>
+								<td class="t">所在设备IP：</td>
+								<td>15.85GB</td>
+							</tr>
+							<tr>
+								<td class="t">SSD数量：</td>
+								<td>10GB</td>
+							</tr>
+							<tr>
+								<td class="t">已用容量：</td>
+								<td>5.85GB</td>
+							</tr>
+							<tr>
+								<td class="t">是否LUN访问：</td>
+								<td>6%</td>
+							</tr>
+						</tbody>
+					</table>	
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">详细信息</a>
+					<a class="tBtn choose">SSD盘</a>
+					<a class="tBtn">LUN访问</a>
+				</h2>
+				<div class="panel_content">					
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th width="15%">wwn</th>
+							<th width="15%">硬盘槽位</th>
+							<th width="15%">硬盘类型</th>
+							<th width="10%">容量大小</th>
+							<th width="20%">命中率</th>
+							<th width="15%">读吞吐率</th>
+							<th>随机读IOPS</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td width="15%">123</td>
+								<td width="15%">1，3</td>
+								<td width="15%">SSD</td>
+								<td width="10%">10GB</td>
+								<td width="20%">40%</td>
+								<td width="15%">50MB/s</td>
+								<td>10000</td>
+							</tr>
+							<tr>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="15%">Ed980</td>
+								<td width="10%">2.5TB</td>
+								<td width="20%">90%</td>
+								<td width="15%">正在运行</td>
+								<td>7500</td>
+							</tr>
+							<tr>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="15%">Ed980</td>
+								<td width="10%">2.5TB</td>
+								<td width="20%">90%</td>
+								<td width="15%">正在运行</td>
+								<td>7500</td>
+							</tr>
+							<tr>
+								<td width="15%">192.168.1.1</td>
+								<td width="15%">mds</td>
+								<td width="15%">Ed980</td>
+								<td width="10%">2.5TB</td>
+								<td width="20%">90%</td>
+								<td width="15%">正在运行</td>
+								<td>7500</td>
+							</tr>							
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2_btn panel_common_bg_green">
+					<a class="tBtn">详细信息</a>
+					<a class="tBtn">SSD盘</a>
+					<a class="tBtn choose">LUN访问</a>
+				</h2>
+				<div class="panel_content">
+					<table class="table_header contentTable_header_bg_green">
+						<thead>
+							<th width="30%">名称</th>
+							<th width="20%">ID</th>
+							<th width="30%">容量</th>
+							<th width="20%">运行状态</th>
+						</thead>
+					</table>
+					<table class="table_body">
+						<tbody>
+							<tr>
+								<td width="30%">LUN002_for150_001</td>
+								<td width="20%">9</td>
+								<td width="30%">1.0GB</td>
+								<td width="20%">在线</td>
+							</tr>
+							<tr>
+								<td width="30%">LUN002_for150_002</td>
+								<td width="20%">10</td>
+								<td width="30%">1.0GB</td>
+								<td width="20%">在线</td>
+							</tr>
+							<tr>
+								<td width="30%">LUN002_for150_003</td>
+								<td width="20%">11</td>
+								<td width="30%">1.0GB</td>
+								<td width="20%">在线</td>
+							</tr>
+							<tr>
+								<td width="30%">LUN002_for150_004</td>
+								<td width="20%">12</td>
+								<td width="30%">1.0GB</td>
+								<td width="20%">在线</td>
+							</tr>							
+						</tbody>
+					</table>	
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="../../js/common.js"></script>
+<script src="../../js/table.operation.js"></script>
+</body>
+</html>

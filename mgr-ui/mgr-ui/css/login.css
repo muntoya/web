@@ -1,0 +1,143 @@
+body{
+	background: url(../img/login_body_back.png) repeat center center;
+	text-align: center;
+}
+
+.login_div{
+	/*width: 430px;
+	height: 506px;*/	
+	background: url(../img/login_back.png) no-repeat;
+	border:1px solid #679047;
+
+	position: relative;
+
+	/*position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -253px;
+	margin-top: -215px;
+
+	padding: 120px 50px;*/
+}
+
+.login_form{
+	border: 1px solid red;
+	line-height: 40px;
+}
+
+.login_form p{
+	margin:20px 40px;
+
+}
+
+.username_logo{
+	background-image: url("../img/login_icon.png");
+	height: 36px;
+	width: 36px;
+}
+
+.psw_logo{
+	background: url("../img/login_icon.png") no-repeat 0 -60px; 
+	height: 36px;
+	width: 36px;
+}
+
+/*body{
+	background: url(../img/login_body_back.png) repeat;
+}
+
+#login_form{
+	width: 430px;
+	height: 506px;	
+	background: url(../img/login_back.png) no-repeat;	
+
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -253px;
+	margin-left: -215px;
+
+	padding-left: 64px;
+	padding-right: 64px;
+
+}
+
+.login_user_iocn{
+	background-image: url("../img/login_icon.png"); 
+	background-position: 0px 0px;
+	height: 36px;
+	width: 36px;
+	float: left;
+}
+
+input:-moz-placeholder{
+	color: #d1eba8;
+}
+
+#login_form input{
+	background-image: url("../img/login_input.png");
+	width: 224px;
+	height: 40px;
+	margin-left: 20px;
+	padding-left: 13px;
+	font-family: regular;
+	font-size: 12px;
+	color: #fff;
+}
+
+.login_psw_iocn{
+	background-image: url("../img/login_icon.png"); 
+	background-position: 0px -60px;
+	height: 36px;
+	width: 36px;
+	float: left;
+}
+
+.username_div{
+	margin-top: 167px;
+	margin-bottom: 26px;
+}
+
+a.rememberPSW{
+	display: block;
+	float: right;
+	margin-right: 138px;
+	margin-top: 5px;
+	color: #518203;
+	font-size: 11px;
+
+}
+
+a.rememberPSW:hover{
+	color:#02986c;
+}
+
+a span.login_check_logo{
+	background: url("../img/login_check.png") no-repeat 0 2px;
+	width: 11px;
+	height: 11px;
+	padding-left: 5px;
+}
+
+a.submit{
+	background: url("../img/login_submit_btn.png") no-repeat;
+	height: 50px;
+	width: 137px;
+	display: inline-block;	
+	font-size: 18px;
+	font-family: "微软雅黑",regular;
+	color: #5c9502;
+	text-align: center;
+	padding-top: 9px;
+	cursor: pointer;
+}
+a.submit:hover{
+	background: url("../img/login_submit_btn.png") no-repeat 0 -80px;
+}
+a.submit:active{
+	background: url("../img/login_submit_btn.png") no-repeat 0 -151px;
+}
+
+.centerDiv{
+	margin: 66px 90px;
+}*/

@@ -1,0 +1,22 @@
+<div id="tabInfo" class="panel_content h150">					
+	<table class="table_header contentTable_header_bg_green">
+		<thead>
+			<th>名称</th>
+			<th width="20%">ID</th>
+			<th width="30%">容量</th>
+			<th width="20%">运行状态</th>
+		</thead>
+	</table>
+	<table class="table_body">
+		<tbody>
+			{% for lun in pool_lun_list %}
+			<tr>
+				<td>{{ lun.name }}</td>
+				<td width="20%">{{ lun.id }}</td>
+				<td width="30%">{{ lun.available|floatformat:2 }}GB</td>
+				<td width="20%">{% if lun.status == 1 %}在线{% else %}离线{% endif %}</td>
+			</tr>						
+			{% endfor %}
+		</tbody>
+	</table>					
+</div>

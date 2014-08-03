@@ -1,0 +1,28 @@
+<div id="tabInfo" class="panel_content p_12_24 h150">
+	<table class="lh_30 w_70 col2 ">
+		<tbody>
+			<tr>
+				<td class="t">标识：</td>
+				<td>{{ initiator.id }}</td>
+				<td class="space"></td>
+				<td class="t">别名：</td>
+				<td>{{ initiator.alias }}</td>
+			</tr>
+			<tr>
+				<td class="t">HBA 卡型：</td>
+				<td>{% if initiator.hbatype == 1 %}FC{% else %}WC{% endif %}</td>
+				<td class="space"></td>
+				<td class="t">CHAP 数量：</td>
+				<td>{{ initiator.chapcnt }}</td>
+			</tr>
+			<tr>
+				<td class="t">状态：</td>
+				<td>{% if initiator.status == 1 %}已连接{% else %}未连接{% endif %}</td>
+			</tr>
+			<tr>
+				<td class="t">CHAP 启动状态：</td>
+				<td>{% if initiator.chapstatus == 1 %}已启动{% else %}未启动{% endif %}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

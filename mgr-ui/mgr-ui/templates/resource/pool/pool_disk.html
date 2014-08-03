@@ -1,0 +1,32 @@
+<div id="tabInfo" class="panel_content h150">					
+	<table class="table_header contentTable_header_bg_green">
+		<thead>
+			<th>wwn</th>
+			<th width="10%">硬盘槽位</th>
+			<th width="10%">硬盘类型</th>
+			<th width="10%">容量大小</th>
+			<th width="10%">已用容量</th>
+			<th width="10%">所属存储池</th>
+			<th width="10%">吞吐率</th>
+			<th width="10%">IOPS</th>
+			<th class="w94">健康状态</th>
+		</thead>
+	</table>
+	<table class="table_body">
+		<tbody>
+			{% for disk in pool_disk_list %}
+			<tr>
+				<td>{{ disk.wwn }}</td>
+				<td width="10%">{{ disk.slot }}</td>
+				<td width="10%">{% if disk.type == 1 %}SAS{% else %}BABA{% endif %}</td>
+				<td width="10%">{{ disk.available|floatformat:2 }}TB</td>
+				<td width="10%">{{ disk.used }}GB</td>
+				<td width="10%">{{ disk.pool }}</td>
+				<td width="10%">{{ disk.throughput|floatformat:2 }}MB/s</td>
+				<td width="10%">{{ disk.iops|floatformat:2 }}</td>
+				<td class="w94">{% if disk.status == 1 %}正常{% else %}错误{% endif %}</td>
+			</tr>	
+			{% endfor %}						
+		</tbody>
+	</table>					
+</div>

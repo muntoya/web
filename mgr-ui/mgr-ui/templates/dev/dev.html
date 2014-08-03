@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% include "common/head.html" with style_css='/static/css/dev.css' %}
+<body class="bodyCommon">
+	{% include "common/header.html" %}
+	<div id="body">
+		{% include "common/aside.html" with device_page=True %}
+		<div id="content">
+			<div class="panel w_all">
+				<h2 class="panel_h2 panel_common_bg_green">集群信息</h2>
+				{% include 'dev/dev_cluster.html' %}
+			</div>
+
+			<div class="panel w_all mt_15">
+				<h2 class="panel_h2 panel_common_bg_green">系统拓扑图</h2>
+				<div class="panel_content tc p_15_0">
+					<img class="td_img" src="{% static 'img/net.png' %}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/table.operation.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div id="tabInfo" class="panel_content p_12_24 h150">
+	<table class="lh_30 w_70 col2 ">
+		<tbody>
+			<tr>
+				<td class="t">名称：</td>
+				<td>{{ pool_detail.name }}</td>
+				<td class="space"></td>
+				<td class="t">利用率：</td>
+				<td>{{ pool_detail.useratio|floatformat:2 }}%</td>				
+			</tr>
+			<tr>
+				<td class="t">可用容量：</td>
+				<td>{{ pool_detail.available|floatformat:2 }}GB</td>
+				<td class="space"></td>
+				<td class="t">运行状态：</td>
+				<td>{% if pool_detail.status %}在线{% else %}离线{% endif %}</td>
+			</tr>
+			<tr>
+				<td class="t">已用容量：</td>
+				<td>{{ pool_detail.used|floatformat:2 }}GB</td>
+			</tr>
+			<tr>
+				<td class="t">剩余容量：</td>
+				<td>{{ pool_detail.free|floatformat:2 }}GB</td>
+			</tr>
+			<!-- <tr>
+				<td class="t">利用率：</td>
+				<td>{{ pool_detail.useratio|floatformat:2 }}%</td>
+			</tr> -->
+			<!-- <tr>
+				<td class="t">运行状态：</td>
+				<td>{% if pool_detail.status %}在线{% else %}离线{% endif %}</td>
+			</tr> -->
+		</tbody>
+	</table>
+</div>

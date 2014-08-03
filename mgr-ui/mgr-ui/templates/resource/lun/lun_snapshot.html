@@ -1,0 +1,24 @@
+<div id="tabInfo" class="panel_content h150">
+	<table class="table_header contentTable_header_bg_green">
+		<thead>
+			<th>名称</th>
+			<th width="15%">ID</th>
+			<th width="20%">源 LUN 名称</th>
+			<th width="15%">源 LUN ID</th>
+			<th width="20%">创建时间</th>
+		</thead>
+	</table>
+	<table class="table_body">
+		<tbody>
+		{% for snapshot in snapshot_list %}
+			<tr>
+				<td>{{ snapshot.name }}</td>
+				<td width="15%">{{ snapshot.id }}</td>
+				<td width="20%">{{ snapshot.lunname }}</td>
+				<td width="15%">{{ snapshot.lunid }}</td>
+				<td width="20%">{{ snapshot.creation }}</td>							
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>

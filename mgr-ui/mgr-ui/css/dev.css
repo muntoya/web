@@ -1,0 +1,9 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("base.css");
+
+.lenged{width: 10px; height: 10px;}
+.idle_bg{background-color: #e21ed2;}
+.user_bg{background-color: #4f7fc9;}
+.system_bg{background-color: #eeda87;}
+.t_dev{padding-right: 10px;}
